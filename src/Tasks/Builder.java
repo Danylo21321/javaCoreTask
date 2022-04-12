@@ -1,8 +1,8 @@
 package Tasks;
 
-import java.util.Comparator;
+
 import java.util.List;
-import java.util.OptionalDouble;
+
 
 public interface Builder {
     Builder filterPersonByAge(List<Person> people);

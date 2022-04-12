@@ -1,17 +1,8 @@
 package Tasks;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
 public class InnerClass {
     public static void main(String[] args) {
-
+       Commodity commodity = new Commodity();
+       commodity.Comparator();
     }
-}
-@Data
-@AllArgsConstructor
-class Product{
-    private String nameModel;
-    private int sum;
-    private int serialNumber;
 }

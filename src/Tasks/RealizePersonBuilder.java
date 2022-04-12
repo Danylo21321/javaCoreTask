@@ -27,7 +27,7 @@ public class RealizePersonBuilder implements Builder {
                 .filter(person -> person.getAge() >= 18)
                 .forEach(System.out::println);
 
-        people.stream().filter(person -> person.getSex().equals("woman"))
+        people.stream().filter(person -> person.getSex().equals("women"))
                 .filter(person -> person.getAge() <= 60)
                 .filter(person -> person.getAge() >= 18)
                 .forEach(System.out::println);

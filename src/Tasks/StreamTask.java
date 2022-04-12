@@ -15,7 +15,7 @@ public class StreamTask {
 
         peopleBuilder.filterPersonByAge(list).showText().middleAgePerson(list).showText()
                 .showPeopleWhoWork(list).showText().sorted(list).showText().maxAge(list).showText()
-                .sechWomenName(list);
+                .minAge(list).showText().sechWomenName(list).showText().showAllPerson(list);
 
 
     }

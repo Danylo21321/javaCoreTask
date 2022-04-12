@@ -21,6 +21,8 @@ public interface Builder {
 
     Builder showText();
 
+    Builder minAge(List<Person> people);
+
 }
 class RealizePersonBuilder implements Builder{
     @Override
@@ -90,6 +92,14 @@ class RealizePersonBuilder implements Builder{
     @Override
     public Builder showText() {
         System.out.println("   ");
+        return this;
+    }
+
+    @Override
+    public Builder minAge(List<Person> people) {
+        Person minAge = people.stream().min(Comparator.comparingDouble(Person::getAge))
+                .get();
+        System.out.println(minAge);
         return this;
     }
 }

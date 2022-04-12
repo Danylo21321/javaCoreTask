@@ -19,6 +19,8 @@ public interface Builder {
 
     Builder showAllPerson(List<Person> people);
 
+    Builder showText();
+
 }
 class RealizePersonBuilder implements Builder{
     @Override
@@ -72,15 +74,22 @@ class RealizePersonBuilder implements Builder{
 
     @Override
     public Builder sechWomenName(List<Person> people) {
-        people.stream().filter(person -> person.getSex().equals("women"))
-                .filter(person -> person.getName().contains("a"))
-                .forEach(System.out::println);
-        return this;
+            people.stream().filter(person -> person.getSex().equals("women"))
+                    .filter(person -> person.getName().contains("a"))
+                    .forEach(System.out::println);
+            return this;
     }
+
 
     @Override
     public Builder showAllPerson(List<Person> people) {
         people.forEach(System.out::println);
+        return this;
+    }
+
+    @Override
+    public Builder showText() {
+        System.out.println("   ");
         return this;
     }
 }
